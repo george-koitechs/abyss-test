@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+
+.select__trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  background-color: $white;
+  cursor: pointer;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.select__trigger_open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.select__dropdown_open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 3px 10px $gray1;
+}
+
+.select__option {
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.select__option_selected,
+.select__option:hover {
+  background-color: $gray1;
+}

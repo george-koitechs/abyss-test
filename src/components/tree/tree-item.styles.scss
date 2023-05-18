@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+
+.treeItem {
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  gap: 5px;
+}
+.treeItem__text {
+  border: 1px dashed #c9c9c9;
+  padding: 5px 15px;
+  font-size: 14px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+[class*="treeItem__text_"] {
+  border: none;
+}
+.treeItem__text_2 {
+  background-color: #ffac7e;
+}
+.treeItem__text_3 {
+  background-color: #1abbdf;
+}
+[class*="treeItem__text_"]:not([class$="_1"]):not([class$="_2"]):not([class$="_3"]) {
+  background-color: #b5c6ca;
+}
+.treeItem__input {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  min-width: 100px;
+}
+
+.treeItem__actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.treeItem__action {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: $gray1;
+  transition: opacity 0.3s;
+}
+
+.treeItem__action_red {
+  background: #e38282;
+}
+
+.treeItem__action_green {
+  background: #13b613;
+}
+
+.treeItem__action_yellow {
+  background: #fddb33;
+}
+
+.treeItem__action_hidden {
+  opacity: 0;
+  visibility: hidden;
+}

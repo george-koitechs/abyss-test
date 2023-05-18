@@ -1,0 +1,62 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+}
+body {
+  font-family: $Manrope;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $text-primary-heading;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.button {
+  border: none;
+  background-color: $white;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: $text-secondary-paragraph;
+  text-transform: uppercase;
+  &:hover:not(:disabled) {
+    background-color: $gray2;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+.button_gray {
+  border: 1px solid $gray3;
+  background-color: $gray1;
+  &:hover:not(:disabled) {
+    background-color: $gray3;
+  }
+}
+.button_square {
+  width: 40px;
+  aspect-ratio: 1;
+}
